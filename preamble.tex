@@ -1,0 +1,29 @@
+\usepackage{pgf,tikz, pgffor,pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage[load-configurations=abbreviations,detect-all]{siunitx}
+\usepackage{pifont}
+
+\renewcommand{\exp}[1]{\operatorname{e}^{#1}}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations}
+\usetikzlibrary{matrix}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{positioning,arrows}
+
+\def\conflict{\tikz[baseline]{\draw [-latex,thick,color=red] (0,2ex) -- (-.2,0) -- (0, .2ex) -- (-.2,-2ex);}}
+ 
+\mode<beamer>{
+\setbeamertemplate{beamer page}[plain]
+\usetheme[plain,invariant,school=Sahkotekniikankorkeakoulu]{Aalto}
+
+}
+
+
+
+

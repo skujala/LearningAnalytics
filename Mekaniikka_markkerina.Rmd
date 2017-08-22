@@ -1,0 +1,54 @@
+---
+title: "Mekaniikka markkerina"
+author: "Sami Kujala"
+date: "22.8.2017"
+output: 
+  beamer_presentation: 
+    keep_tex: yes
+    includes:
+      in_header: preamble.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source('Koosta_kurssisuoritukset.R')
+```
+
+## Alkupään viikkoaktiivisuus ennustaa läpäisyä
+
+```{r viikkoaktiivisuus, echo=FALSE}
+ggplot(
+  lapaisyt, 
+  aes(x=Viikko, y=Läpäisyprosentti, group=1)
+) + 
+  geom_point() +
+  geom_line() +
+  facet_grid(Tehtyjä_tehtäviä~Osallistui_VK1) + 
+  theme_fivethirtyeight() +
+  ggtitle(
+    "Läpäisyprosentti y-akselilla, viikkotehtävä x-akselilla", 
+    "sarakkeet = osallistui 1. välikokeeseen, rivit = ko. viikolla tehty viikkoaktiivisuus"
+  )
+```
+
+## Päätelmät
+
+* Edellisessä kuvassa x-akselilla ko. viikkoon mennessä kumuloitunut viikkoaktiivisuus
+    - Tarkoittaa viikkojen 1--N kokonaisaktiivisuutta
+* Ei osallistunut välikokeeseen ja teki 0-33% viikkotehtävistä
+    - Suurin osa hylättiin
+* Osallistui välikokeeseen ja teki 0-33% viikkotehtävistä 
+    - Läpäisyprosentti putoaa nopeasti; *vaikutusmahdollisuus*
+* Toisaalta, jos teki 66-100% viikkotehtävistä pitkin kurssia, läpäisyprosentti nousee likimain 100 %:iin
+    - Hyvät pärjäävät opetuksesta huolimatta
+    
+
+## Toiminta
+
+* Ensimmäinen välikoe on 27.9.
+    - Läsnäolotiedot saatavilla pian, tuloksissa kestää pidempään
+* Ensimmäisen kolmen viikon jälkeen tarkistan MyCoursesista pistelistat
+* Näiden tietojen + fuksiryhmätietojen perusteella muodostuu lista kontaktoitavista opiskelijoista
+* Toimitan listan Riikalle
+* Riikka välittää tiedon eteenpäin
+* Kurssin jälkeen tutkitaan intervention vaikutus, myös suora palaute tutoreilta tarpeen
