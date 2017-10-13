@@ -11,6 +11,9 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+require(ggplot2)
+require(ggthemes)
+require(RColorBrewer)
 source('Koosta_kurssisuoritukset.R')
 ```
 
